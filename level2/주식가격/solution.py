@@ -5,6 +5,7 @@ def solution(prices):
    for i in range(length):
        for j in range(i + 1, length):
            answer[i] += 1  # 시간 증가
+           
            if prices[i] > prices[j]:  # 가격이 떨어졌으면
                break  # 더 이상 확인하지 않음
                
