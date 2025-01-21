@@ -13,7 +13,7 @@ def solution(myString, pat):
         
     # 모든 가능한 부분 문자열 확인
     for i in range(myString_len - pat_len + 1):
-        if myString[i:i+pat_len] == pat:
+        if myString[i:i + pat_len] == pat:
             return 1
             
     return 0

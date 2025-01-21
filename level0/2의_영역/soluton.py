@@ -8,4 +8,4 @@ def solution(arr):
    last = len(arr) - arr[::-1].index(2) - 1  # 마지막 2의 위치
    
    # first부터 last까지의 부분 배열 반환
-   return arr[first:last+1]
+   return arr[first:last + 1]
