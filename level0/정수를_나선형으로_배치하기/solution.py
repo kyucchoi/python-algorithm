@@ -10,7 +10,7 @@ def solution(n):
     dir = 0      # 현재 방향
     
     # 1부터 n*n까지 숫자 채우기
-    for i in range(1, n*n + 1):
+    for i in range(1, n * n + 1):
         result[x][y] = i
         
         # 다음 위치 계산
@@ -21,6 +21,7 @@ def solution(n):
         # (배열을 벗어나거나 이미 숫자가 채워진 경우)
         if (nx < 0 or nx >= n or ny < 0 or ny >= n or result[nx][ny] != 0):
             dir = (dir + 1) % 4  # 다음 방향으로 전환
+            
             nx = x + dx[dir]
             ny = y + dy[dir]
             
