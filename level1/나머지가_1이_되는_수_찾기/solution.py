@@ -3,4 +3,4 @@ def solution(n):
         if n % x == 1:
             return x
         
-    return n - 1  # n-1은 항상 나머지가 1이 됨
+    return n - 1  # n - 1은 항상 나머지가 1이 됨
