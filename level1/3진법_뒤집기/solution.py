@@ -1,7 +1,7 @@
 # 방법 1
 def solution(n):
     # 10진법 -> 3진법으로 변환
-    ternary = ""
+    ternary = ''
 
     while n > 0:
         ternary += str(n % 3)
@@ -20,7 +20,7 @@ def solution(n):
 # 방법 2
 def solution(n):
     # 10진법 -> 3진법 (뒤집힌 상태)
-    ternary = ""
+    ternary = ''
     
     while n > 0:
         ternary += str(n % 3)
