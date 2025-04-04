@@ -7,12 +7,12 @@ def solution(N, stages):
     for stage in stages:
         stage_counts[stage] += 1
 
-    # stages = [2, 1, 2, 6, 2, 4, 3, 3]을 처리하면
-    # stage_counts[2] += 1 (3번 발생)
-    # stage_counts[1] += 1 (1번 발생)
-    # stage_counts[6] += 1 (1번 발생)
-    # stage_counts[4] += 1 (1번 발생)
-    # stage_counts[3] += 1 (2번 발생)
+        # stages = [2, 1, 2, 6, 2, 4, 3, 3]을 처리하면
+        # stage_counts[2] += 1 (3번 발생)
+        # stage_counts[1] += 1 (1번 발생)
+        # stage_counts[6] += 1 (1번 발생)
+        # stage_counts[4] += 1 (1번 발생)
+        # stage_counts[3] += 1 (2번 발생)
     
     # 각 스테이지에 도달한 사용자 수 계산
     reached_users = len(stages)
@@ -21,6 +21,7 @@ def solution(N, stages):
     
     # 각 스테이지의 실패율 계산
     failure_rates = []
+
     for i in range(1, N + 1):
         # 해당 스테이지에 도달한 사용자가 없는 경우 실패율은 0
         if reached_users == 0:
@@ -28,11 +29,11 @@ def solution(N, stages):
         else:
             failure_rate = stage_counts[i] / reached_users
 
-        # i = 1 : failure_rate = 1 / 8 = 0.125 (8명이 도달하고 1명이 머물러 있음)
-        # i = 2 : failure_rate = 3 / 7 = 0.429 (7명이 도달하고 3명이 머물러 있음)
-        # i = 3 : failure_rate = 2 / 4 = 0.5 (4명이 도달하고 2명이 머물러 있음)
-        # i = 4 : failure_rate = 1 / 2 = 0.5 (2명이 도달하고 1명이 머물러 있음)
-        # i = 5 : failure_rate = 0 / 1 = 0 (1명이 도달하고 0명이 머물러 있음)
+            # i = 1 : failure_rate = 1 / 8 = 0.125 (8명이 도달하고 1명이 머물러 있음)
+            # i = 2 : failure_rate = 3 / 7 = 0.429 (7명이 도달하고 3명이 머물러 있음)
+            # i = 3 : failure_rate = 2 / 4 = 0.5 (4명이 도달하고 2명이 머물러 있음)
+            # i = 4 : failure_rate = 1 / 2 = 0.5 (2명이 도달하고 1명이 머물러 있음)
+            # i = 5 : failure_rate = 0 / 1 = 0 (1명이 도달하고 0명이 머물러 있음)
         
         failure_rates.append((i, failure_rate))
 
@@ -57,9 +58,10 @@ def solution(N, stages):
     # 정렬된 스테이지 번호만 추출
     result = [stage for stage, _ in failure_rates]
     # result = []
+
     # for stage, _ in failure_rates:
         # result.append(stage)
-        
+
     # result = [3, 4, 2, 1, 5]
     
     return result
