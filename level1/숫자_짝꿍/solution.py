@@ -13,6 +13,7 @@ def solution(X, Y):
     
     # 공통 숫자 찾기
     common_digits = []
+    
     for digit in '9876543210':  # 큰 수부터 확인
         if digit in x_count and digit in y_count:
             # 두 문자열에서 공통으로 등장하는 최소 횟수만큼 추가
