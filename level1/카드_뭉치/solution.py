@@ -12,7 +12,7 @@ def solution(cards1, cards2, goal):
             idx2 += 1
         # 두 카드 뭉치 모두에서 현재 단어를 찾을 수 없는 경우
         else:
-            return "No"
+            return 'No'
     
     # 모든 단어를 성공적으로 찾은 경우
-    return "Yes"
+    return 'Yes'

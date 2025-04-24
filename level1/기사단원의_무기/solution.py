@@ -16,7 +16,7 @@ def solution(number, limit, power):
 def count_divisors(n):
     count = 0
     # 제곱근까지만 확인하면 됨
-    for i in range(1, int(n**0.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             # i가 약수라면 n//i도 약수
             if i == n // i:  # 제곱근인 경우 한 번만 카운트

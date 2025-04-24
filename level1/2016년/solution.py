@@ -2,7 +2,7 @@
 import datetime
 
 def solution(a, b):
-    days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
+    days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 
     day = datetime.datetime(2016, a, b).weekday()
 
@@ -10,7 +10,7 @@ def solution(a, b):
 
 # 방법 2
 def solution(a, b):
-    days = ["FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU"]
+    days = ['FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED', 'THU']
     months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
     # 1월 1일부터 a월 b일까지의 총 일수 계산
