@@ -1,9 +1,10 @@
+# 방법 1
 def solution(people, limit):
     people.sort()  # 몸무게 오름차순 정렬
     
     left = 0  # 가장 가벼운 사람의 인덱스
     right = len(people) - 1  # 가장 무거운 사람의 인덱스
-    
+
     boats = 0  # 필요한 구명보트 수
     
     while left <= right:
