@@ -1,4 +1,3 @@
-# 방법 1
 def solution(people, limit):
     people.sort()  # 몸무게 오름차순 정렬
     
