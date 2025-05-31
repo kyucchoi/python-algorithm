@@ -1,3 +1,4 @@
+# 방법 1
 def solution(n, words):
     # 이미 사용된 단어들을 저장할 집합
     used_words = set()
@@ -21,4 +22,30 @@ def solution(n, words):
         used_words.add(word)
     
     # 탈락자가 없는 경우
+    return [0, 0]
+
+# 방법 2
+def solution_alternative(n, words):
+    # 사용된 단어를 추적하는 리스트 방식
+    used_words = []
+    
+    for i in range(len(words)):
+        word = words[i]
+        
+        # 중복 단어 체크
+        if word in used_words:
+            player = i % n + 1
+            turn = i // n + 1
+
+            return [player, turn]
+        
+        # 끝말잇기 규칙 체크 (첫 번째 단어 제외)
+        if i > 0 and words[i-1][-1] != word[0]:
+            player = i % n + 1
+            turn = i // n + 1
+            
+            return [player, turn]
+        
+        used_words.append(word)
+    
     return [0, 0]
