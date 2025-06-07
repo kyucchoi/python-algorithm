@@ -40,6 +40,7 @@ def solution_optimized(want, number, discount):
         return 0
     
     discount_count = {}
+    
     for i in range(10):
         product = discount[i]
         discount_count[product] = discount_count.get(product, 0) + 1
