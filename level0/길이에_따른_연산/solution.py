@@ -6,4 +6,5 @@ def solution(num_list):
 
         for num in num_list:
             result *= num
+            
         return result

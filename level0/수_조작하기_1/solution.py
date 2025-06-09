@@ -1,10 +1,10 @@
 def solution(n, control):
    for char in control:
-       if char == "w":
+       if char == 'w':
            n += 1
-       elif char == "s":
+       elif char == 's':
            n -= 1
-       elif char == "d":
+       elif char == 'd':
            n += 10
        else:  # char == "a"
            n -= 10
