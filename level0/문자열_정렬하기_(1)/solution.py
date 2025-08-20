@@ -1,4 +1,3 @@
-
 def solution(my_string):
     # 숫자만 골라내기
     numbers = []

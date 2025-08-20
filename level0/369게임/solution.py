@@ -1,4 +1,3 @@
-
 def solution(order):
     order_str = str(order)
     

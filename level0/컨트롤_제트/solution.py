@@ -4,7 +4,7 @@ def solution(s):
     stack = []
     
     for token in tokens:
-        if token == "Z":
+        if token == 'Z':
             # Z가 나오면 마지막 숫자를 제거
             if stack:
                 stack.pop()
