@@ -1,6 +1,5 @@
 def solution(board):
     n = len(board)
-
     # 위험지역을 표시할 배열 생성 (0으로 초기화)
     danger = [[0] * n for _ in range(n)]
     # 8방향 좌표 (상하좌우 + 4개 대각선)
