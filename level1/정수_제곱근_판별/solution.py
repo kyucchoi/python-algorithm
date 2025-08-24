@@ -1,6 +1,6 @@
 def solution(n):
     # n의 제곱근 계산
-    x = n ** 0.5
+    x = n**0.5
     
     # 제곱근이 정수인지 확인
     if x == int(x):

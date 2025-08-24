@@ -13,7 +13,7 @@ def solution(n):
     result = 0
 
     for i in range(len(ternary)):
-        result += int(ternary[i]) * (3 ** (len(ternary) - i - 1))
+        result += int(ternary[i]) * (3**(len(ternary) - i - 1))
     
     return result
 

@@ -17,7 +17,7 @@ def solution(a, b, c, d):
             # 3개가 같은 경우
             p = [k for k, v in counts.items() if v == 3][0]
             q = [k for k, v in counts.items() if v == 1][0]
-            return (10 * p + q) ** 2
+            return (10 * p + q)**2
         else:
             # 2개씩 같은 경우
             p, q = nums[0][0], nums[1][0]
