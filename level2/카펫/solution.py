@@ -1,3 +1,4 @@
+# 방법 1
 def solution(brown, yellow):
     total = brown + yellow
     
@@ -9,3 +10,13 @@ def solution(brown, yellow):
             # 조건 확인: 노란색이 (w - 2) * (h - 2)개인지
             if (w - 2) * (h - 2) == yellow:
                 return [w, h]
+
+# 방법 2
+def solution(brown, yellow):
+    half_peri = (brown + 4) // 2
+
+    for heigth in range(3, half_peri):
+        width = half_peri - heigth
+
+        if heigth * width == yellow + brown:
+            return [width, heigth]
