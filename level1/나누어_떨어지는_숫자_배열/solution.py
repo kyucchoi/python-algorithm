@@ -1,3 +1,4 @@
+# 방법 1
 def solution(arr, divisor):
     # 나누어 떨어지는 값을 저장할 리스트
     result = []
@@ -13,3 +14,13 @@ def solution(arr, divisor):
     
     # 오름차순 정렬하여 반환
     return sorted(result)
+
+# 방법 2
+def solution(arr, divisor):
+    answer = []
+
+    for i in range(len(arr)):
+        if arr[i] % divisor == 0:
+            answer.append(arr[i])
+
+    return sorted(answer) if answer else [-1]
