@@ -1,16 +1,14 @@
 # 방법 1
 def solution(price, money, count):
-    # 총 필요한 금액 계산
-    total_price = 0
-
-    for i in range(1, count + 1):
-        total_price += price * i
+    total_cost = 0
     
-    # 부족한 금액 계산
-    shortage = total_price - money
-    
-    # 부족하지 않으면 0 반환
-    return shortage if shortage > 0 else 0
+    for ride_count in range(1, count + 1):
+        total_cost += ride_count * price
+        
+    if total_cost > money:
+        return total_cost - money
+    else:
+        return 0
 
 # 방법 2
 def solution(price, money, count):
