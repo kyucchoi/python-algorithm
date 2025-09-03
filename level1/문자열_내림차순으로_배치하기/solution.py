@@ -1,3 +1,4 @@
+# 방법 1
 def solution(s):
     # 문자열을 리스트로 변환
     chars = list(s)
@@ -8,8 +9,6 @@ def solution(s):
     # 리스트를 다시 문자열로 변환
     return ''.join(chars)
 
-# 내 방법
+# 방법 2
 def solution(s):
-    answer = sorted(s, reverse = True)
-    
-    return ''.join(answer)
+    return ''.join(sorted(s, reverse = True))
