@@ -1,3 +1,4 @@
+# 방법 1
 def solution(d, budget):
     d.sort()  # 신청 금액을 오름차순으로 정렬
     count = 0  # 지원 가능한 부서 수
@@ -9,4 +10,19 @@ def solution(d, budget):
         else:
             break  # 예산 부족 시 반복 종료
     
+    return count
+
+# 방법 2
+def solution(d, budget):
+    d.sort()
+    count = 0
+    total = 0
+    
+    for amount in d:
+        if total + amount <= budget:
+            total += amount
+            count += 1
+        else:
+            break
+            
     return count
