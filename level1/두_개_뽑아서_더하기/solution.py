@@ -31,4 +31,4 @@ def solution(numbers):
         for j in range(i + 1, len(numbers)):
             answer.append(numbers[i] + numbers[j])
     
-    return sorted(list(set(answer)))
+    return sorted(list(answer))
