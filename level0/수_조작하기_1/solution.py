@@ -6,7 +6,7 @@ def solution(n, control):
             n -= 1
         elif char == 'd':
             n += 10
-        else:  # char == "a"
+        elif char == 'a':
             n -= 10
     
     return n
