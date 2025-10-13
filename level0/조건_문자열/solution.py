@@ -5,5 +5,5 @@ def solution(ineq, eq, n, m):
         return int(n <= m)
     elif ineq == '>' and eq == '!':
         return int(n > m)
-    else:
+    elif ineq == '<' and eq == '!':
         return int(n < m)
