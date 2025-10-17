@@ -8,7 +8,6 @@ def solution(n, arr1, arr2):
         # n 길이에 맞게 앞에 0 채우기
         binary = binary.zfill(n)
         
-        # 1은 '#'으로, 0은 ' '으로 변환
         row = binary.replace('1', '#').replace('0', ' ')
         
         result.append(row)
