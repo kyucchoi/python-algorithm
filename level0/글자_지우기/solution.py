@@ -1,5 +1,4 @@
 def solution(my_string, indices):
-    # 문자열을 리스트로 변환
     string_list = list(my_string)
     
     # indices의 위치에 있는 문자들을 빈 문자로 변경
