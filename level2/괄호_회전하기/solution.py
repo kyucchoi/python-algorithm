@@ -28,17 +28,7 @@ def solution(s):
 
 # 방법 2
 def solution(s):
-    # 조기 종료 조건들
-    if len(s) % 2 == 1:  # 홀수 길이는 불가능
-        return 0
-    
-    # 각 괄호 종류별 개수가 맞지 않으면 불가능
-    if (s.count('(') != s.count(')') or 
-        s.count('[') != s.count(']') or 
-        s.count('{') != s.count('}')):
-        return 0
-    
-    def is_valid_brackets(string):
+    def is_valid(string):
         stack = []
         pairs = {'(': ')', '[': ']', '{': '}'}
         
@@ -46,17 +36,19 @@ def solution(s):
             if char in pairs:
                 stack.append(char)
             else:
-                if not stack or pairs[stack.pop()] != char:
+                if not stack or pairs[stack[-1]] != char:
                     return False
                 
+                stack.pop()
+        
         return len(stack) == 0
     
-    count = 0
+    answer = 0
 
     for x in range(len(s)):
         rotated = s[x:] + s[:x]
 
-        if is_valid_brackets(rotated):
-            count += 1
-
-    return count
+        if is_valid(rotated):
+            answer += 1
+    
+    return answer
