@@ -11,13 +11,11 @@ def solution(quiz):
         Y = int(parts[2])        # 두 번째 숫자
         Z = int(parts[4])        # 결과값
 
-        # 실제 계산 수행
         if operator == '+':
             calculated = X + Y
-        else:  # operator == '-'
+        elif operator == '-':
             calculated = X - Y
 
-        # 계산 결과와 주어진 결과 비교
         if calculated == Z:
             result.append('O')
         else:

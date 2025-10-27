@@ -1,5 +1,4 @@
 def solution(arr, k):
-    # 중복 제거하면서 순서 유지
     result = []
     seen = set()  # 이미 나온 숫자를 기록할 집합
     
