@@ -1,17 +1,19 @@
 # 방법 1
 def solution(participant, completion):
-    participant.sort()
-    completion.sort()
+    hash_dict = {}
     
-    for i in range(len(completion)):
-        if participant[i] != completion[i]:
-            return participant[i]
-            
-    return participant[-1]
+    for person in participant:
+        hash_dict[person] = hash_dict.get(person, 0) + 1
+    
+    for person in completion:
+        hash_dict[person] -= 1
+    
+    for person, count in hash_dict.items():
+        if count > 0:
+            return person
 
 # 방법 2
 def solution(participant, completion):
-    # 참가자들의 이름과 등장 횟수를 저장할 딕셔너리
     participants = {}
     
     # 참가자 이름을 딕셔너리에 추가하고 등장 횟수를 카운트
@@ -43,3 +45,14 @@ def solution(participant, completion):
     
     # Counter에서 남은 단 하나의 키(완주하지 못한 선수 이름)를 반환
     return list(result.keys())[0]
+
+# 방법 4
+def solution(participant, completion):
+    participant.sort()
+    completion.sort()
+    
+    for i in range(len(completion)):
+        if participant[i] != completion[i]:
+            return participant[i]
+            
+    return participant[-1]
