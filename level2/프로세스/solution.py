@@ -1,22 +1,52 @@
+# 방법 1
 from collections import deque
 
-def solution(priorities, location):    
-    # 큐에 (우선순위, 원래 인덱스) 저장
-    queue = deque([(p, i) for i, p in enumerate(priorities)])
-    execution_order = 0
+def solution(priorities, location):
+    # (인덱스, 우선순위) 형태로 큐 생성
+    queue = deque([(i, p) for i, p in enumerate(priorities)])
+
+    answer = 0
     
     while queue:
-        current_priority, current_index = queue.popleft()
-        
-        # 더 높은 우선순위가 있는지 확인
-        if any(p > current_priority for p, _ in queue):
-            # 다시 큐 뒤에 넣기
-            queue.append((current_priority, current_index))
+        current = queue.popleft()
+
+        if any(current[1] < q[1] for q in queue):
+            queue.append(current)
         else:
-            # 실행!
-            execution_order += 1
-            
-            if current_index == location:
-                return execution_order
+            answer += 1
+
+            if current[0] == location:
+                return answer
     
-    return -1
+    return answer
+
+# 방법 2
+from collections import deque
+
+def solution(priorities, location):
+    queue = deque()
+    
+    for i, p in enumerate(priorities):
+        queue.append((i, p))
+        
+    answer = 0
+    
+    while queue:
+        current = queue.popleft()
+        
+        found_higher = False
+        
+        for q in queue:
+            if current[1] < q[1]:
+                found_higher = True
+                break
+                
+        if found_higher:
+            queue.append(current)
+        else:
+            answer += 1
+            
+            if current[0] == location:
+                return answer
+            
+    return answer
