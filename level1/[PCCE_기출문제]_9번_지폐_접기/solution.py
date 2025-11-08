@@ -1,8 +1,6 @@
 def solution(wallet, bill):
-    # 지폐를 접은 횟수를 저장할 변수
     answer = 0
     
-    # wallet과 bill을 각각 작은 값과 큰 값으로 정렬
     wallet.sort()
     bill.sort()
     
