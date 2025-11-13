@@ -14,7 +14,7 @@ def solution(k, m, score):
     if len(score) < m:
         return 0
     
-    score.sort(reverse=True)
+    score.sort(reverse = True)
     
     answer = 0
     
