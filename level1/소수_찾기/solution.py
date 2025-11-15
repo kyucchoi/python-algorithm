@@ -48,3 +48,18 @@ def solution(numbers):
             count += 1
     
     return count
+
+# 방법 3
+def solution(n):
+    is_prime = [True] * (n + 1)
+    
+    is_prime[0] = False
+    is_prime[1] = False
+    
+    for i in range(2, int(n**0.5) + 1):
+        if is_prime[i]:
+            # i의 배수들을 모두 제거 (i * 2, i * 3, i * 4, ...)
+            for j in range(i * 2, n + 1, i):
+                is_prime[j] = False
+    
+    return sum(is_prime)
