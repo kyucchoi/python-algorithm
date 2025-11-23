@@ -1,4 +1,4 @@
-# 방법 1
+# ?? 1
 def solution(arr1, arr2):
     if len(arr1) < len(arr2):
         return -1
@@ -15,7 +15,7 @@ def solution(arr1, arr2):
     elif sum_arr1 == sum_arr2:
         return 0
     
-# 방법 2
+# ?? 2
 def solution(arr1, arr2):
     if len(arr1) != len(arr2):
         return 1 if len(arr1) > len(arr2) else -1
@@ -26,5 +26,5 @@ def solution(arr1, arr2):
         return 1
     elif sum1 < sum2:
         return -1
-    else:
+    elif sum1 == sum2:
         return 0
