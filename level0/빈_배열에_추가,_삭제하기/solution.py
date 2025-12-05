@@ -1,7 +1,6 @@
 def solution(arr, flag):
-    X = []  # 빈 배열로 시작
+    X = []
     
-    # arr와 flag를 동시에 순회
     for i in range(len(arr)):
         if flag[i]:
             # True인 경우: arr[i]를 arr[i] * 2번 추가
