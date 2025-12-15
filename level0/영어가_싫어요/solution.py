@@ -17,5 +17,4 @@ def solution(numbers):
     for word, digit in word_to_digit.items():
         numbers = numbers.replace(word, digit)
     
-    # 문자열을 정수로 변환하여 반환
     return int(numbers)
