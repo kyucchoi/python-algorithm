@@ -1,6 +1,6 @@
 # 방법 1
 def solution(citations):
-    citations.sort(reverse = True)
+    citations.sort(reverse=True)
 
     for i in range(len(citations)):
         if i >= citations[i]:

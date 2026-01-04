@@ -7,7 +7,7 @@ def solution(k, tangerine):
         count_dict[size] = count_dict.get(size, 0) + 1
     
     # 개수를 기준으로 내림차순 정렬
-    sorted_counts = sorted(count_dict.values(), reverse = True)
+    sorted_counts = sorted(count_dict.values(), reverse=True)
     
     selected = 0
     types = 0
@@ -29,7 +29,7 @@ def solution(k, tangerine):
     count = Counter(tangerine)
     
     # 개수를 기준으로 내림차순 정렬
-    sorted_counts = sorted(count.values(), reverse = True)
+    sorted_counts = sorted(count.values(), reverse=True)
     
     selected = 0  # 선택한 귤의 개수
     types = 0     # 사용한 크기 종류의 수

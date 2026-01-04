@@ -4,7 +4,7 @@ def solution(mats, park):
     w = len(park[0])
     
     # 가용한 돗자리 크기를 내림차순으로 정렬
-    mats.sort(reverse = True)
+    mats.sort(reverse=True)
     
     # 각 돗자리 크기에 대해 확인
     for mat_size in mats:

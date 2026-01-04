@@ -1,6 +1,6 @@
 # 방법 1
 def solution(k, m, score):
-    score.sort(reverse = True)
+    score.sort(reverse=True)
     
     total_profit = 0
     
@@ -14,7 +14,7 @@ def solution(k, m, score):
     if len(score) < m:
         return 0
     
-    score.sort(reverse = True)
+    score.sort(reverse=True)
     
     answer = 0
     

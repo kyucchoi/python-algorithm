@@ -1,5 +1,5 @@
 def solution(emergency):
-    sorted_emergency = sorted(emergency, reverse = True)
+    sorted_emergency = sorted(emergency, reverse=True)
     
     rank_map = {}
 

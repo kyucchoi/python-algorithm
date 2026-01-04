@@ -1,6 +1,6 @@
 def solution(A, B):
     A.sort()  # A 배열을 오름차순 정렬
-    B.sort(reverse = True)  # B 배열을 내림차순 정렬
+    B.sort(reverse=True)  # B 배열을 내림차순 정렬
     
     total = 0
     

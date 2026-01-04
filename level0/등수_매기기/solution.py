@@ -3,7 +3,7 @@ def solution(score):
     averages = [(eng + math) / 2 for eng, math in score]
     
     # 평균 점수를 내림차순으로 정렬 (중복 제거)
-    sorted_averages = sorted(set(averages), reverse = True)
+    sorted_averages = sorted(set(averages), reverse=True)
     
     # 각 평균 점수에 대한 등수 매핑
     rank_map = {}

@@ -5,7 +5,7 @@ def solution(k, score):
     
     for daily_score in score:
         hall_of_fame.append(daily_score)
-        hall_of_fame.sort(reverse = True)
+        hall_of_fame.sort(reverse=True)
         
         if len(hall_of_fame) > k:
             hall_of_fame.pop()
