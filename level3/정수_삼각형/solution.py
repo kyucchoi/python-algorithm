@@ -1,6 +1,5 @@
 # 방법 1
 def solution(triangle):
-    # 새로운 dp 테이블 생성
     dp = [[0] * len(row) for row in triangle]
     dp[0][0] = triangle[0][0]
     
@@ -17,7 +16,6 @@ def solution(triangle):
 
 # 방법 2
 def solution(triangle):
-    # triangle 자체를 dp 테이블로 사용
     for i in range(1, len(triangle)):
         for j in range(len(triangle[i])):
             if j == 0:

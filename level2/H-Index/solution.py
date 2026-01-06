@@ -16,9 +16,9 @@ def solution(citations):
     
     for i in range(len(citations)):
 
-        if citations[i] >= i + 1:
-            h_index = i + 1
-        else:
-            break
+        # h = min(논문 수, 인용 횟수)
+        h = min(i + 1, citations[i])
+        
+        h_index = max(h_index, h)
     
     return h_index
