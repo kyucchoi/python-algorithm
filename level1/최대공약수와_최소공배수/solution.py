@@ -4,6 +4,7 @@ def solution(n, m):
     def gcd(a, b):
         while b:
             a, b = b, a % b
+
         return a
     
     # 최소공배수(LCM) 계산 - GCD를 이용한 공식
@@ -16,10 +17,8 @@ def solution(n, m):
 import math
 
 def solution(n, m):
-    # 최대공약수
     gcd_value = math.gcd(n, m)
     
-    # 최소공배수
     lcm_value = n * m // gcd_value
     
     return [gcd_value, lcm_value]

@@ -1,9 +1,10 @@
+import math
+
 def solution(a, b):
-    import math
     
     # 1단계: 기약분수로 만들기 (최대공약수로 약분)
     gcd = math.gcd(a, b)
-    b = b // gcd  # 분모만 확인하면 됨 (분자는 유한소수 판별에 영향 없음)
+    b = b // gcd
     
     # 2단계: 분모에서 2와 5의 인수를 모두 제거
     while b % 2 == 0:

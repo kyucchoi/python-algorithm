@@ -4,6 +4,7 @@ def solution(arr):
     def gcd(a, b):
         while b:
             a, b = b, a % b
+            
         return a
     
     # 최소공배수를 구하는 함수
