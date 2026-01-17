@@ -1,9 +1,8 @@
 from collections import Counter
 
 def solution(str1, str2):
-    # 다중집합 만들기
     def make_multiset(s):
-        s = s.upper()
+        s = s.lower()
         multiset = []
         
         for i in range(len(s) - 1):
@@ -17,20 +16,16 @@ def solution(str1, str2):
     set1 = make_multiset(str1)
     set2 = make_multiset(str2)
     
-    # 둘 다 공집합
     if not set1 and not set2:
         return 65536
     
     counter1 = Counter(set1)
     counter2 = Counter(set2)
     
-    # 교집합: 각 원소의 최솟값
-    intersection = counter1 & counter2
+    intersection = sum((counter1 & counter2).values())
     
-    # 합집합: 각 원소의 최댓값
-    union = counter1 | counter2
+    union = sum((counter1 | counter2).values())
     
-    # 자카드 유사도
-    jaccard = sum(intersection.values()) / sum(union.values())
+    jaccard = intersection / union
     
     return int(jaccard * 65536)
