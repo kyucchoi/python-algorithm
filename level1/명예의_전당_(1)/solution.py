@@ -18,16 +18,15 @@ def solution(k, score):
 import heapq
 
 def solution(k, score):
-    heap = []  # 최소 힙 사용
+    heap = []
     answer = []
     
     for s in score:
-        # 힙에 새 점수 추가
         heapq.heappush(heap, s)
-        # 힙의 크기가 k를 초과하면 가장 작은 값 제거
+        
         if len(heap) > k:
             heapq.heappop(heap)
-        # 현재 힙의 최소값(최하위 점수) 기록
+
         answer.append(heap[0])
     
     return answer
