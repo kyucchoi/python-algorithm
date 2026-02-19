@@ -1,34 +1,40 @@
 def solution(n, k):
-    converted = convert_base(n, k)
+    def convert(num, base):
+        if num == 0:
+            return '0'
+
+        result = ''
+
+        while num > 0:
+            result = str(num % base) + result
+            num //= base
+
+        return result
     
-    numbers = converted.split('0')
+    def is_prime(num):
+        if num < 2:
+            return False
+
+        if num == 2:
+            return True
+
+        if num % 2 == 0:
+            return False
+
+        for i in range(3, int(num**0.5) + 1, 2):
+            if num % i == 0:
+                return False
+
+        return True
+    
+    converted = convert(n, k)
+
+    parts = converted.split('0')
     
     count = 0
     
-    for num_str in numbers:
-        if num_str and is_prime(int(num_str)):
+    for part in parts:
+        if part and is_prime(int(part)):
             count += 1
     
     return count
-
-def convert_base(n, k):
-    if n == 0:
-        return '0'
-    
-    result = ''
-
-    while n > 0:
-        result = str(n % k) + result
-        n //= k
-    
-    return result
-
-def is_prime(n):
-    if n < 2:
-        return False
-    
-    for i in range(2, int(n**0.5) + 1, 2):
-        if n % i == 0:
-            return False
-    
-    return True
