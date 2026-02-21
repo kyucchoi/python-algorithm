@@ -7,11 +7,9 @@ def solution(arr):
             
         return a
     
-    # 최소공배수를 구하는 함수
     def lcm(a, b):
         return (a * b) // gcd(a, b)
     
-    # 배열의 모든 원소에 대해 순차적으로 LCM 계산
     result = arr[0]
 
     for i in range(1, len(arr)):
