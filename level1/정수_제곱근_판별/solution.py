@@ -1,11 +1,35 @@
+# math.isqrt 방법
+import math
+
 def solution(n):
-    # n의 제곱근 계산
-    x = n**0.5
-    
-    # 제곱근이 정수인지 확인
-    if x == int(x):
-        # 정수라면 x+1의 제곱 반환
-        return (int(x) + 1)**2
+    x = math.isqrt(n)
+
+    if x * x == n:
+        return (x + 1) ** 2
     else:
-        # 정수가 아니라면 -1 반환
         return -1
+
+# 나머지 연산 방법
+def solution(n):
+    x = n ** 0.5
+
+    if x == int(x):
+        return (int(x) + 1) ** 2
+    else:
+        return -1
+
+# 이분탐색 방법
+def solution(n):
+    left, right = 1, n
+
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if mid * mid == n:
+            return (mid + 1) ** 2
+        elif mid * mid < n:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return -1

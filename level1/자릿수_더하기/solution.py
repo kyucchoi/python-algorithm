@@ -1,13 +1,23 @@
+# 방법 1
 def solution(n):
-    # 숫자를 문자열로 변환
-    str_n = str(n)
+    digits = str(n)
+    answer = 0
     
-    # 각 자릿수를 더할 리스트 생성
-    digits = []
-    
-    # 각 문자를 숫자로 변환하여 리스트에 추가
-    for digit in str_n:
-        digits.append(int(digit))
-    
-    # 모든 숫자 더하기
-    return sum(digits)
+    for digit in digits:
+        answer += int(digit)
+        
+    return answer
+
+# map 사용
+def solution(n):
+    return sum(map(int, str(n)))
+
+# 수학적으로 풀기
+def solution(n):
+    answer = 0
+
+    while n > 0:
+        answer += n % 10
+        n //= 10
+        
+    return answer

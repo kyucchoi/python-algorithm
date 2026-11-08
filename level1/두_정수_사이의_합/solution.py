@@ -1,10 +1,7 @@
+# sum + range
 def solution(a, b):
-    start = min(a, b)
-    end = max(a, b)
-    
-    total = 0
-    
-    for i in range(start, end + 1):
-        total += i
-        
-    return total
+    return sum(range(min(a, b), max(a, b) + 1))
+
+# 등차수열 합 공식을 쓰면 O(1)
+def solution(a, b):
+    return (a + b) * (abs(a - b) + 1) // 2

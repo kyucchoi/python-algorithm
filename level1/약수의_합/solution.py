@@ -1,11 +1,25 @@
+# 방법 1
 def solution(n):
-    # 약수들의 합을 저장할 변수
     total = 0
     
-    # 1부터 n까지 반복
     for i in range(1, n + 1):
-        # i가 n의 약수인지 확인
         if n % i == 0:
             total += i
             
     return total
+
+# 제곱근까지만 확인하기 (O(√n))
+def solution(n):
+    answer = 0
+    i = 1
+
+    while i * i <= n:
+        if n % i == 0:
+            answer += i
+
+            if i != n // i:
+                answer += n // i
+                
+        i += 1
+
+    return answer
