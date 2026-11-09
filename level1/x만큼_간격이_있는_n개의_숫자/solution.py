@@ -1,3 +1,4 @@
+# for문 + append
 def solution(x, n):
     answer = []
 
@@ -5,3 +6,7 @@ def solution(x, n):
         answer.append(x * i)
 
     return answer
+
+# 리스트 컴프리헨션
+def solution(x, n):
+    return [x * i for i in range(1, n + 1)]
