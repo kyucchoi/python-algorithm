@@ -1,5 +1,5 @@
+# 방법 1
 def solution(num):
-    # 주어진 수가 1이면 0 반환
     if num == 1:
         return 0
     
@@ -17,3 +17,16 @@ def solution(num):
         count += 1
     
     return count
+
+# 방법 2
+def solution(num):
+    for count in range(500):
+        if num == 1:
+            return count
+        
+        if num % 2 == 0:
+            num //= 2
+        else:
+            num = num * 3 + 1
+    
+    return -1
