@@ -14,13 +14,13 @@ def solution(n):
 def solution(n):
     return ('수박' * n)[:n]
 
-# 내 방법
+# 방법 3
 def solution(n):
-    answer = ''
-    
-    if n % 2 == 0:
-        answer += '수박' * (n // 2)
+    if n % 2 == 1:
+        return '수박' * (n // 2) + '수'
     else:
-        answer += '수박' * (n // 2) + '수'
-        
-    return answer
+        return '수박' * (n // 2)
+
+# 방법 4
+def solution(n):
+    return '수박' * (n // 2) + '수' * (n % 2)
