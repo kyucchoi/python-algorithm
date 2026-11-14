@@ -12,14 +12,16 @@ def solution(arr1, arr2):
         
     return answer
 
-# 방법 2
+# zip 함수 사용
 def solution(arr1, arr2):
-    rows = len(arr1)
-    cols = len(arr1[0])
-    answer = [[0] * cols for _ in range(rows)]
-    
-    for i in range(rows):
-        for j in range(cols):
-            answer[i][j] = arr1[i][j] + arr2[i][j]
+    answer = []
+
+    for row1, row2 in zip(arr1, arr2):
+        row = []
+
+        for a, b in zip(row1, row2):
+            row.append(a + b)
+
+        answer.append(row)
         
     return answer
